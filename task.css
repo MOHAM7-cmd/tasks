@@ -1,105 +1,111 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: serif;
+/* reset عام */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: serif;
 }
 
-body{
-    background-color: rgb(225, 219, 225);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
+/* الجسم العام */
+body {
+  background-color: rgb(225, 219, 225);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-h1{
-    margin-top: 100px;
-    font-family: cursive;
-    font-weight:bolder;
-    color:rgb(179, 6, 179);
-    
+/* العنوان */
+h1 {
+  margin-top: 40px;
+  font-family: cursive;
+  font-weight: bolder;
+  color: rgb(179, 6, 179);
+  text-align: center;
 }
 
-.form{
-position: absolute;
-margin-top: 40%;
-width: 400px;
-box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
-border-radius:5px ;
-background-color: #777;
-
+/* صندوق الإدخال */
+.form {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #777;
+  padding: 10px;
 }
 
-.input{
-    width: 100%;
-    padding: 15px 10px;
-    box-sizing: border-box;
-    font-size: 20px;
-    border-radius: 7px;
-    background-color: rgb(255, 255, 255);
-    
-    
+/* حقل الإدخال */
+.input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 18px;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  outline: none;
 }
 
-ul{
-    list-style:none;
-    display: flex;
-    flex-direction: column;
-    margin: 0 5px;
-    max-height: 200px;
-    overflow-y: scroll;
-
-
-    
+/* قائمة المهام */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
+/* العناصر داخل القائمة */
 ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px ;
-    font-family: cursive;
-    margin: 8px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  font-family: cursive;
+  margin: 5px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
-ul li h4{
-    font-family: cursive;
-    color: rgb(206, 194, 22);
-    cursor: pointer;
+/* نص المهمة */
+ul li h4 {
+  color: rgb(206, 194, 22);
+  cursor: pointer;
 }
 
-ul li h4:hover{
-    transform: scale(1.05);
+ul li h4:hover {
+  transform: scale(1.05);
 }
 
- ul li .fa-trash{
-    color: rgb(222, 3, 3);
-    cursor: pointer;
- }
-
- ul li  .fa-check-square{
-    color: rgb(18, 225, 18);
-    cursor: pointer;
+/* الأيقونات */
+ul li .fa-trash {
+  color: rgb(222, 3, 3);
+  cursor: pointer;
 }
 
-ul li .fa-trash:hover{
-    transform: scaleX(1.2);
+ul li .fa-check-square {
+  color: rgb(18, 225, 18);
+  cursor: pointer;
 }
 
-ul li .fa-check-square:hover{
-    transform: scale(1.2);
-    
+ul li .fa-trash:hover {
+  transform: scale(1.2);
 }
 
+ul li .fa-check-square:hover {
+  transform: scale(1.2);
+}
+
+/* عند إكمال المهمة */
 .done h4 {
   text-decoration: line-through;
   color: rgb(21, 21, 21);
 }
 
-
-
-.done  {
+.done {
   text-decoration: line-through;
   color: rgb(0, 0, 0);
 }
@@ -108,3 +114,25 @@ ul li .fa-check-square:hover{
   color: rgb(55, 55, 55);
 }
 
+/* 🌟 تحسين التصميم للموبايل */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .input {
+    font-size: 16px;
+    padding: 12px 8px;
+  }
+
+  ul li {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
