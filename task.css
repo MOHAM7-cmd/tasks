@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: serif;
+}
+
+body{
+    background-color: rgb(225, 219, 225);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+h1{
+    margin-top: 100px;
+    font-family: cursive;
+    font-weight:bolder;
+    color:rgb(179, 6, 179);
+    
+}
+
+.form{
+position: absolute;
+margin-top: 40%;
+width: 400px;
+box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
+border-radius:5px ;
+background-color: #777;
+
+}
+
+.input{
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+ul{
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    max-height: 200px;
+    overflow-y: scroll;
+
+
+    
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px ;
+    font-family: cursive;
+    margin: 8px 5px;
+}
+
+ul li h4{
+    font-family: cursive;
+    color: rgb(206, 194, 22);
+    cursor: pointer;
+}
+
+ul li h4:hover{
+    transform: scale(1.05);
+}
+
+ ul li .fa-trash{
+    color: rgb(222, 3, 3);
+    cursor: pointer;
+ }
+
+ ul li  .fa-check-square{
+    color: rgb(18, 225, 18);
+    cursor: pointer;
+}
+
+ul li .fa-trash:hover{
+    transform: scaleX(1.2);
+}
+
+ul li .fa-check-square:hover{
+    transform: scale(1.2);
+    
+}
+
+.done h4 {
+  text-decoration: line-through;
+  color: rgb(21, 21, 21);
+}
+
+
+
+.done  {
+  text-decoration: line-through;
+  color: rgb(0, 0, 0);
+}
+
+.done .fa-check-square {
+  color: rgb(55, 55, 55);
+}
+
